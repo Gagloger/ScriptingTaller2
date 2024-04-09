@@ -1,0 +1,14 @@
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\bin\Debug\net6.0\Delegado.exe
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\bin\Debug\net6.0\Delegado.deps.json
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\bin\Debug\net6.0\Delegado.runtimeconfig.json
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\bin\Debug\net6.0\Delegado.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\bin\Debug\net6.0\Delegado.pdb
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.AssemblyInfoInputs.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.AssemblyInfo.cs
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\refint\Delegado.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.pdb
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\Delegado.genruntimeconfig.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Delegado\obj\Debug\net6.0\ref\Delegado.dll
