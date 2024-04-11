@@ -222,10 +222,46 @@ public class Player
 
  ```
 En este caso, la clase Player puede acceder al GameManager desde cualquier parte del código simplemente llamando a GameManager.Instance. Esto facilita el acceso y la gestión de instancias únicas de clases en todo el programa.
----
+
 
 ### 4. Investigar y explicar un patron de POO y un principio
----
+
+## Singleton en POO 
+- garantiza que solo exista una única instancia de una clase en toda la aplicación. Esto se logra mediante el uso de un constructor privado, una variable estática privada para almacenar la instancia y un método estático público para proporcionar acceso a esta instancia única. Este enfoque asegura que todas las partes del programa accedan y compartan la misma instancia de la clase Singleton, lo que puede ser útil para gestionar recursos globales, configuraciones del sistema o componentes compartidos.
+
+## Principio de Open/Closed
+- El principio de Open/Closed (OCP) establece que las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para la extensión pero cerradas para la modificación. Esto significa que el código debe estar diseñado de tal manera que pueda extenderse fácilmente para agregar nuevas funcionalidades sin necesidad de modificar el código existente.
+
+## Ejemplos de open/closed
+- Supongamos que tienes una clase Shape que representa diferentes formas geométricas y quieres calcular el área de cada una. Puedes aplicar el principio OCP de la siguiente manera:
+```
+public abstract class Shape
+{
+    public abstract double Area();
+}
+
+public class Rectangle : Shape
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+
+    public override double Area()
+    {
+        return Width * Height;
+    }
+}
+
+public class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    public override double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+```
 
 ### 5. Consultar y explicar el cilclo de vida de un script en Unity
 ---
