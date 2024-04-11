@@ -1,0 +1,14 @@
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\bin\Debug\net6.0\Eventos.exe
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\bin\Debug\net6.0\Eventos.deps.json
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\bin\Debug\net6.0\Eventos.runtimeconfig.json
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\bin\Debug\net6.0\Eventos.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\bin\Debug\net6.0\Eventos.pdb
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.AssemblyInfoInputs.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.AssemblyInfo.cs
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\refint\Eventos.dll
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.pdb
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\Eventos.genruntimeconfig.cache
+C:\Users\User\Documents\000 UPB\5to sem\Scripting\ScriptingTaller2\Eventos\obj\Debug\net6.0\ref\Eventos.dll
