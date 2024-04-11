@@ -2,6 +2,7 @@
 #### *Integrantes:* 
 - Jacobo Prada
 - Nombre 2
+  
 [Link a la presentación](https://www.canva.com/design/DAGCHeLq8FU/7FpgvEjPQNDTFVpjkVECcQ/edit?utm_content=DAGCHeLq8FU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ### 1. Explicar por medio de un ejemplo de min 5 funciones, el concepto de *DELEGADO*
 ---
