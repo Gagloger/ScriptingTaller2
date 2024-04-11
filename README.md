@@ -57,6 +57,112 @@ Ahora podemos utilizar un *array* que queramos y medirla sus datos estadísticos
 > Nota: como vemos no importa el orden en el que declaremos las funciones sino el orden en que agregamos estas dentro del delegado...
 
 ### 2. Consultar y crear un ejemplo donde se evidencie el uso de *"event"* en c# (comparar al modelo de Corgi)
+Para los eventos, en términos simples, tenemos un *delegado encapsulado en una clase*, a esta clase la llamaremos **editor,** y a este editor, se le **suscribirán** otras clases. Este "Editor", ***notificará*** por medio del evento a todas los suscriptores cuando un proceso en particular ocurra, ejecutando las funciones suscritas de todos al estilo de un delegado.
+**Veamos un ejemplo:**
+Supongamos que queremos iniciar un aplicación, y que cuando esta cargue de forma correcta, comiencen distintos procesos de clases externas a la carga de la App como lo puede ser ***iniciar sesión*** o ***cargar base de datos***
+Pues esto lo podemos simular e implementar por medio de eventos, donde la aplicación sea nuestro editor, y los procesos alrededor de esta sean sus suscriptores. comencemos creando la clase editor
+
+	 public class EditorInicioApp
+	 {
+		public delegate void DelegadoEditor(); //usamos un delegado como vimos antes
+		public event DelegadoEditor EventoEditor; //con la palabra reservada event declaramos el evento a partir del delegado
+Luego, dentro de la clase, en algún punto, llamaremos al evento para que todas las clases suscritas ejecuten sus acciones, en este caso, cuando la App haya cargado
+
+	public void IniciarCargaApp()
+	{
+	    try
+	    {
+        Console.WriteLine("Cargando aplicación...");
+        Console.WriteLine("Puede tardar unos momentos");
+        Console.WriteLine();
+        CargaCompletada(true); //Carga completada correctamente
+	    }
+	    catch (Exception ex)
+	    {
+        CargaCompletada(false); //caso de fallo en la carga
+	    }
+    }
+    public void CargaCompletada(bool cargaExitosa)
+	{
+	    if (cargaExitosa)
+	    {
+	        EventoEditor(); //aqui notificamos que el evento ha ocurrido, y como un delegado le avisará a todos los suscriptores
+	    }
+	    else { Console.WriteLine("Error al cargar la app"); }
+	}
+Ahora veamos al suscriptor 
+
+	public class Suscriptor1
+	{
+    private string nombre;
+    private string contraseña;
+    
+    public void InicioDeSesion()
+    {
+        Console.WriteLine("Iniciando la sesion del usuario:");
+        Console.WriteLine("Nombre: " + nombre);
+        Console.WriteLine("contraseña: " + contraseña);
+    }
+    public Suscriptor1(string nombre, string contraseña, EditorInicioApp editor)
+    {
+        this.nombre = nombre;
+        this.contraseña = contraseña;
+
+        editor.EventoEditor += InicioDeSesion;
+    }
+	}
+	
+Como vemos, al momento de instanciarlo lo que hacemos es suscribir la función específica que necesitamos que haga cuando se complete la carga.
+Ahora cuando llamemos al inicio de App, mediante el evento también se cargará el inicio de sesión
+
+	EditorInicioApp editorMaestro = new EditorInicioApp();
+	Suscriptor1 IniciarSesion = new Suscriptor1("Jacobo", "1234123", editorMaestro);
+	
+	editorMaestro.IniciarCargaApp();
+La consola nos mostrará lo siguiente:
+	
+	Cargando aplicación...		//función del editor ejecutada
+	Puede tardar unos momentos
+
+	Iniciando la sesion del usuario: //función del suscriptor ejecutada
+	Nombre: Jacobo
+	contraseña: 1234123
+Como vemos el ***editor*** notifico al ***suscriptor***  correctamente mediante el evento que la App cargo correctamente, y este actuó en consecuencia... Podemos agregar otra clase suscriptor distinta que actúe con el mismo evento
+
+	public class Suscriptor2
+	{
+		private string TipoDeBaseDeDatos;
+    public void CargarBaseDatos()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Base de datos cargada correctamente...");
+        Console.WriteLine(TipoDeBaseDeDatos + " puede empezar a ser usada");
+    }
+    public Suscriptor2(string tipoDeBase, EditorInicioApp editor)
+    {
+        this.TipoDeBaseDeDatos = tipoDeBase;
+
+        editor.EventoEditor += CargarBaseDatos;
+    }
+	}
+y del mismo modo 
+
+	EditorInicioApp editorMaestro = new EditorInicioApp();
+	Suscriptor1 IniciarSesion = new Suscriptor1("Jacobo", "1234123", editorMaestro);
+	Suscriptor2 BaseDeDatos = new Suscriptor2("Estado de la reserva", editorMaestro);
+
+	editorMaestro.IniciarCargaApp();
+La consola nos mostrará
+
+	Cargando aplicación...			//funcion del editor
+	Puede tardar unos momentos
+						//llamado del evento
+	Iniciando la sesion del usuario: //funcion suscriptor 1
+	Nombre: Jacobo
+	contraseña: 1234123
+
+	Base de datos cargada correctamente... //funcion suscriptor 2
+	Estado de la reserva puede empezar a ser usada
 
 ### 3. Consultar que es un *singletone*, sus pros y contras. ¿Cómo se implementa en C#? ¿Cómo se implementa en Unity?
 
