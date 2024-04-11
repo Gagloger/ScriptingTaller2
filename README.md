@@ -1,6 +1,6 @@
 # Scripting: taller 2
 #### *Integrantes:* 
-- Nombre 1
+- Jacobo Prada
 - Nombre 2
 - 
 ### 1. Explicar por medio de un ejemplo de min 5 funciones, el concepto de *DELEGADO*
@@ -63,3 +63,19 @@ Ahora podemos utilizar un *array* que queramos y medirla sus datos estadísticos
 ### 4. Investigar y explicar un patron de POO y un principio
 
 ### 5. Consultar y explicar el cilclo de vida de un script en Unity
+El **ciclo de vida** de un script en Unity viene dado en el siguiente orden:
+
+ 1. Primero tenemos las **funciones del editor** (lo que se actualiza cada vez que hacemos cambios en un script).
+ 2. De segundo tenemos la **inicialización** de los elementos, variables, objetos, etc.
+ 3. Luego se resuelven las **físicas** (colisiones, fixed y triggers).
+ 4. Posteriormente se leen los **inputs** del sistema.
+ 5. De quinto se aplica la **lógica del sistema** (coroutines, update).
+ 6. Con todo lo anterior se **renderiza la escena** que vemos.
+ 7. Luego los **gizmos.**
+ 8. Y encima de todo las **interfaces.**
+ 9. De noveno paso se procesa el **fin de cada frame.**
+ 10. Y se detectan **pausas**. (en este punto se vuelve al tercer paso)
+ 11. Casi al finalizar se detecta si un objeto a sido **deshabilitado o habilitado.**
+ 12. Por último se procesa lo que ocurre al **final del programa** o si se destruye algún objeto.
+
+[más información detallada sobre la vida de un script](https://docs.unity3d.com/es/530/Manual/ExecutionOrder.html)
