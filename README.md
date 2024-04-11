@@ -179,7 +179,49 @@ Corgi cuenta con una clase estatica **MMEventManager**, que se encarga de notifi
 	this.MMEventStopListening<MMAchievementUnlockedEvent>(); // fin
 	}
 
-### 3. Consultar que es un *singletone*, sus pros y contras. ¿Cómo se implementa en C#? ¿Cómo se implementa en Unity?
+### 3. *singletone*
+En este ejemplo, la clase GameManager implementa el patrón Singleton. Solo puede haber una instancia de GameManager en todo el juego. Esto es útil porque permite que cualquier parte del programa acceda al mismo GameManager desde cualquier lugar del código.
+ ```
+public class GameManager
+{
+    private static GameManager instance;
+    private int score;
+
+    private GameManager() { }
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new GameManager();
+            }
+            return instance;
+        }
+    }
+
+    public int Score
+    {
+        get { return score; }
+        set { score = value; }
+    }
+
+    public void IncrementScore(int points)
+    {
+        score += points;
+    }
+}
+public class Player
+{
+    public void AddPoints(int points)
+    {
+        GameManager.Instance.IncrementScore(points);
+    }
+}
+
+ ```
+En este caso, la clase Player puede acceder al GameManager desde cualquier parte del código simplemente llamando a GameManager.Instance. Esto facilita el acceso y la gestión de instancias únicas de clases en todo el programa.
 ---
 
 ### 4. Investigar y explicar un patron de POO y un principio
