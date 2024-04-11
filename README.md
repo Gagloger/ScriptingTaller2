@@ -163,6 +163,18 @@ La consola nos mostrará
 
 	Base de datos cargada correctamente... //funcion suscriptor 2
 	Estado de la reserva puede empezar a ser usada
+ #### En el caso de CorgiEngine:
+Corgi cuenta con una clase estatica **MMEventManager**, que se encarga de notificar todos los eventos existentes. Cualquier clase puede hacer uso de estos mediante `MMEventManager.TriggerEvent(YOUR_EVENT)`, no sin antes definir que es una receptora, y en que punto comienza a "escuchar" eventos y cuando para de hacerlo, 
+
+	public class MMAchievementDisplayer : MonoBehaviour, MMEventListener<MMAchievementUnlockedEvent> //heredar definiendose como receptora
+	void OnEnable()
+	{
+	this.MMEventStartListening<MMAchievementUnlockedEvent>(); //comienzo
+	}
+	void OnDisable()
+	{
+	this.MMEventStopListening<MMAchievementUnlockedEvent>(); // fin
+	}
 
 ### 3. Consultar que es un *singletone*, sus pros y contras. ¿Cómo se implementa en C#? ¿Cómo se implementa en Unity?
 
