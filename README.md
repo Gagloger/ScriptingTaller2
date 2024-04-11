@@ -260,6 +260,26 @@ public class Circle : Shape
         return Math.PI * Radius * Radius;
     }
 }
+```
+## Ejemplo de Polimorfismo y Principio OCP en C#
+
+En este ejemplo, se ilustra el uso del polimorfismo y el cumplimiento del principio Open/Closed (OCP) en C# mediante la implementación de un conjunto de clases que representan diferentes formas geométricas.
+
+### Clase abstracta Shape
+
+La clase `Shape` es una clase abstracta que define un método abstracto `Area()`, el cual debe ser implementado por cualquier clase que herede de `Shape`. Esto asegura que todas las formas geométricas proporcionen una forma de calcular su área.
+
+### Clase Rectangle
+
+La clase `Rectangle` hereda de `Shape` y proporciona una implementación del método `Area()`. Esta clase representa un rectángulo y calcula su área multiplicando su ancho por su altura.
+
+### Clase Circle
+
+La clase `Circle` también hereda de `Shape` y proporciona una implementación del método `Area()`. Representa un círculo y calcula su área utilizando la fórmula π * radio * radio.
+
+### Principio OCP
+
+Este ejemplo cumple con el principio Open/Closed (OCP), ya que el diseño permite agregar nuevas formas geométricas al sistema simplemente creando nuevas clases que hereden de `Shape` y proporcionando una implementación del método `Area()`. No es necesario modificar el código existente que depende de las formas geométricas para admitir nuevas formas, lo que demuestra la extensibilidad del diseño.
 
 ```
 
