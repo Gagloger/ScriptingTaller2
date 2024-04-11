@@ -4,8 +4,9 @@
 - Nombre 2
 - 
 ### 1. Explicar por medio de un ejemplo de min 5 funciones, el concepto de *DELEGADO*
-Delegados lo encontramos en C# como un tipo de dato distinto a los que estamos acostumbrados, pues en este caso, es un tipo de dato que no almacena un valor, sino una función. Es importante aclarar que para que un delegado reciba como "valor" una función, la misma debe cumplir con la firma que determina el delegado
 ---
+Delegados lo encontramos en C# como un tipo de dato distinto a los que estamos acostumbrados, pues en este caso, es un tipo de dato que no almacena un valor, sino una función. Es importante aclarar que para que un delegado reciba como "valor" una función, la misma debe cumplir con la firma que determina el delegado
+
 	"tipo de retorno" nombreDelegado("parametros")
 						=
 	"tipo de retorno" nombreFunción("parametros")
@@ -57,6 +58,7 @@ Ahora podemos utilizar un *array* que queramos y medirla sus datos estadísticos
 > Nota: como vemos no importa el orden en el que declaremos las funciones sino el orden en que agregamos estas dentro del delegado...
 
 ### 2. Consultar y crear un ejemplo donde se evidencie el uso de *"event"* en c# (comparar al modelo de Corgi)
+---
 Para los eventos, en términos simples, tenemos un *delegado encapsulado en una clase*, a esta clase la llamaremos **editor,** y a este editor, se le **suscribirán** otras clases. Este "Editor", ***notificará*** por medio del evento a todas los suscriptores cuando un proceso en particular ocurra, ejecutando las funciones suscritas de todos al estilo de un delegado.
 **Veamos un ejemplo:**
 Supongamos que queremos iniciar un aplicación, y que cuando esta cargue de forma correcta, comiencen distintos procesos de clases externas a la carga de la App como lo puede ser ***iniciar sesión*** o ***cargar base de datos***
@@ -177,10 +179,13 @@ Corgi cuenta con una clase estatica **MMEventManager**, que se encarga de notifi
 	}
 
 ### 3. Consultar que es un *singletone*, sus pros y contras. ¿Cómo se implementa en C#? ¿Cómo se implementa en Unity?
+---
 
 ### 4. Investigar y explicar un patron de POO y un principio
+---
 
 ### 5. Consultar y explicar el cilclo de vida de un script en Unity
+---
 El **ciclo de vida** de un script en Unity viene dado en el siguiente orden:
 
  1. Primero tenemos las **funciones del editor** (lo que se actualiza cada vez que hacemos cambios en un script).
