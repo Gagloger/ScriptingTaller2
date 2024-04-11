@@ -5,7 +5,7 @@
 - 
 ### 1. Explicar por medio de un ejemplo de min 5 funciones, el concepto de *DELEGADO*
 Delegados lo encontramos en C# como un tipo de dato distinto a los que estamos acostumbrados, pues en este caso, es un tipo de dato que no almacena un valor, sino una función. Es importante aclarar que para que un delegado reciba como "valor" una función, la misma debe cumplir con la firma que determina el delegado
-
+---
 	"tipo de retorno" nombreDelegado("parametros")
 						=
 	"tipo de retorno" nombreFunción("parametros")
